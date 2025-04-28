@@ -414,22 +414,22 @@ class Hotel
                 
                 break;
             case 4:
-                if(hotel_ob.deluxe_singleerrom[rn]!=null)
-                    System.out.println("Room used by "+hotel_ob.deluxe_singleerrom[rn].name);                
+                 if(hotel_ob.deluxe_doublerrom[rn]!=null)
+                    System.out.println("Room used by "+hotel_ob.deluxe_doublerrom[rn].name);                
                 else 
-                 {    
+                {    
                     System.out.println("Empty Already");
                         return;
                 }
-                System.out.println(" Do you want to checkout ? (y/n)");
+                System.out.println(" Do you want to checkout ?(y/n)");
                  w=sc.next().charAt(0);
                 if(w=='y'||w=='Y')
                 {
                     bill(rn,rtype);
-                    hotel_ob.deluxe_singleerrom[rn]=null;
+                    hotel_ob.deluxe_doublerrom[rn]=null;
                     System.out.println("Deallocated succesfully");
                 }
-                break;
+               break;
             default:
                 System.out.println("\nEnter valid option : ");
                 break;
